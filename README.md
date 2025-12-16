@@ -28,3 +28,5 @@ o	RoleGuard: Restricts pages based on user role
 •	✔️ Auto-redirect if non-admin tries to access Admin routes
 •	✔️ Logout from navigation bar
 •	✔️ Clean UI (Bootstrap)
+
+
