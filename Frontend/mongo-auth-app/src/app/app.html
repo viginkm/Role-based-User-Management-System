@@ -1,0 +1,26 @@
+
+<!--<app-root></app-root> -->
+<!--<app-admin-create-user> </app-admin-create-user>-->
+<!--<app-login></app-login>-->
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-expand navbar-dark bg-dark mb-4 px-3">
+  <a class="navbar-brand" href="#">Mongo Auth App</a>
+
+  <div class="navbar-nav ms-auto">
+    <!-- Links -->
+    <a class="nav-link" *ngIf="!auth.isLoggedIn()" routerLink="/login">Login</a>
+    <a class="nav-link"  *ngIf="auth.isLoggedIn() && auth.getRole() === 'ADMIN' " routerLink="/createuser">Create User</a>
+   <!-- <li class="nav-item" *ngIf="auth.isLoggedIn()" >-->
+          <a class="nav-link"  *ngIf="auth.isLoggedIn()"  href="javascript:void(0)"  (click)="logout()" style="cursor:pointer;">
+            Logout
+          </a>
+          <a class="nav-link"  *ngIf="auth.isLoggedIn()"  href="javascript:void(0)"   style="cursor:pointer;" routerLink="/testcomponent"  >
+            Testcomponent
+          </a>
+       <!-- </li>-->
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
